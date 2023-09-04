@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
-import "./Popup.css";
+import { useEffect } from 'react'
+import './Popup.css'
+import '@fontsource/inter'
 
-export default function() {
+export default function () {
   useEffect(() => {
-    console.log("Hello from the popup!");
-  }, []);
+  }, [])
 
   return (
     <div>
