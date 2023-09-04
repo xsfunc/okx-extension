@@ -1,8 +1,8 @@
 {
   "name": "xs-okx",
   "type": "module",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "Add addresses to OKX WL automatically",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
