@@ -1,0 +1,20 @@
+{
+  "name": "xs-okx",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "vite": "^4.4.9",
+    "vite-plugin-web-extension": "^3.2.0",
+    "webextension-polyfill": "^0.10.0"
+  }
+}
