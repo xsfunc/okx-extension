@@ -20,15 +20,15 @@ async function fillInputs(addressList, prefix) {
     input.dispatchEvent(new Event('input', { bubbles: true }))
   }
 
-  const dialogElement = document.querySelector(selectors.dialog)
-  const addAddressElement = document.querySelector(selectors.addAddressInput)
-
   // open dialog if not opened
+  const dialogElement = document.querySelector(selectors.dialog)
   if (!dialogElement) {
     const openDialogButton = document.querySelector(selectors.openAddressDialogButton)
     openDialogButton.click()
     await new Promise(resolve => setTimeout(resolve, 1000))
   }
+
+  const addAddressElement = document.querySelector(selectors.addAddressInput)
 
   // fill addresses and names
   let index = 0
@@ -61,7 +61,7 @@ async function addToWl(addressList, prefix) {
       target: { tabId: tab.id },
       func: fillInputs,
       args: [
-        addressList.split(/\r?\n/).slice(20),
+        addressList.split(/\r?\n/).slice(0, 20),
         prefix,
       ],
     })
@@ -103,7 +103,7 @@ export default function () {
     >
       <div>
         <Typography level="h5" component="h1">
-          <b>xs</b>OKX tool
+          <b>xs</b>Okx tool
         </Typography>
         <Typography level="body-sm">Add wallets to WL with ease</Typography>
       </div>
