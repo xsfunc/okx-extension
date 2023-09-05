@@ -20,6 +20,7 @@ export default defineConfig({
     react(),
     webExtension({
       manifest: generateManifest,
+      disableAutoLaunch: true,
     }),
   ],
   resolve: {
