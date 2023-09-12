@@ -10,8 +10,8 @@ async function fillInputs(addressList, prefix) {
     addAddressInput: '#scroll-box > div > div > form > div:nth-child(5) > div > div > div > div > div.add-address-form-btn',
     saveAsTrustCheckbox: '#scroll-box > div > div > form > div:nth-child(6) > div > div > div > label > span.okui-checkbox-children',
 
-    addressInputSelector: i => `#scroll-box > div > div > form > div:nth-child(5) > div > div > div > div > div:nth-child(${i}) > div.okui-form-item-control > div > div > div > div > input`,
-    nameInputSelector: i => `#scroll-box > div > div > form > div:nth-child(5) > div > div > div > div > div:nth-child(${i}) > div.okui-form-item-control > div > div > div > div > input`,
+    addressInputSelector: i => `#scroll-box > div > div > form > div:nth-child(6) > div > div > div > div > div:nth-child(${i}) > div.okui-form-item-control > div > div > div > div > input`,
+    nameInputSelector: i => `#scroll-box > div > div > form > div:nth-child(6) > div > div > div > div > div:nth-child(${i}) > div.okui-form-item-control > div > div > div > div > input`,
   }
 
   const fillInput = (selector, value) => {
