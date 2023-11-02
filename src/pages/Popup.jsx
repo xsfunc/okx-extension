@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react'
 import { Alert, Box, Button, FormControl, FormLabel, Input, Textarea, Typography } from '@mui/joy'
 import '@fontsource/inter'
-import './Popup.css'
 
 async function fillInputs(addressList, prefix) {
   const selectors = {
-    openAddressDialogButton: '#root > div > div > div.balance-bottom > div > div.withdraw-book > div.filter-search > div.filter-search-form.filter-search-form-md > button',
+    openAddressDialogButton: '.filter-search-form-btn',
     dialog: '#body > div.okui-transition-fade.okui-dialog.okui-dialog-float.okui-transition-fade-entered > div',
-    addAddressInput: '#scroll-box > div > div > form > div:nth-child(6) > div > div > div > div > div.add-address-form-btn',
-    saveAsTrustCheckbox: '#scroll-box > div > div > form > div:nth-child(6) > div > div > div > label > span.okui-checkbox-children',
+    addAddressInput: '.add-address-form-btn',
+    saveAsTrustCheckbox: 'form span.okui-checkbox input',
 
-    addressInputSelector: i => `#scroll-box > div > div > form > div:nth-child(6) > div > div > div > div > div:nth-child(${i}) > div.okui-form-item-control > div > div > div > div > input`,
-    nameInputSelector: i => `#scroll-box > div > div > form > div:nth-child(6) > div > div > div > div > div:nth-child(${i}) > div.okui-form-item-control > div > div > div > div > input`,
+    addressInputSelector: i => `form .okui-form-item:nth-child(6) .okui-form-item:nth-child(${i}) .okui-input-input`,
+    nameInputSelector: i => `form .okui-form-item:nth-child(6) .okui-form-item:nth-child(${i}) .okui-input-input`,
   }
 
   const fillInput = (selector, value) => {
